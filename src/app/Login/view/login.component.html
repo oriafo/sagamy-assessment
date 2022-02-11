@@ -1,0 +1,64 @@
+<p-toast></p-toast>
+<div class="pages-body login-page p-d-flex p-flex-column">
+    <div class="topbar p-p-3 p-d-flex p-jc-between p-flex-row p-ai-center">
+        <div class="topbar-left p-ml-3 p-d-flex" routerLink="/">
+            <div class="logo">
+                <img src="assets/layout/images/sagamy.png" alt=""/>
+            </div>
+        </div>
+        <div class="topbar-right p-mr-3 p-d-flex">
+            <button pButton pRipple type="button" label="DASHBOARD" [routerLink]="['/dashboard']"
+                    class="p-button-text p-button-plain topbar-button"></button>
+        </div>
+    </div>
+
+    <div class="p-as-center p-mt-auto p-mb-auto">
+        <div class="pages-panel card p-d-flex p-flex-column">
+            <div class="pages-header p-px-3 p-py-1">
+                <h2>LOGIN</h2>
+            </div>
+
+            <h4 class="p-mb-2">SAGAMY</h4>
+            <div class="pages-detail p-mb-3 p-px-6">Propelled by excellence</div>
+
+
+            <div class="input-panel p-d-flex p-flex-column p-px-3">
+
+                    <div class="p-inputgroup p-mt-3 p-mb-3">
+                            <span class="p-float-label">
+                                    <p-dropdown [options]="branchOption" optionLabel="Name" [(ngModel)]="holder"
+                                    [autoDisplayFirst]="false" ></p-dropdown><label for="branch">Branch</label>
+                            </span>
+                        </div>
+            
+                <div class="p-inputgroup">
+                    <span class="p-inputgroup-addon">
+                        <i class="pi pi-user"></i>
+                    </span>
+                    <span class="p-float-label">
+                        <input type="text" id="username" [(ngModel)]="loginVariable.Username" pInputText>
+                        <label for="username">Username</label>
+                    </span>
+                </div>
+
+
+                
+                <div class="p-inputgroup p-mt-3 p-mb-6">
+                    <span class="p-inputgroup-addon">
+                        <i class="pi pi-lock"></i>
+                    </span>
+                    <span class="p-float-label">
+                        <input type="password" id="password" [(ngModel)]="loginVariable.Password" pInputText>
+                        <label for="password">Password</label>
+                    </span>
+                </div>
+
+                
+
+            </div>
+
+            <p-button class="login-button p-mb-6 p-px-3" label="LOGIN" (click)="Login()" ></p-button>
+
+        </div>
+    </div>
+</div>
